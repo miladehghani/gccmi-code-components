@@ -2,7 +2,7 @@
 import { useRef, useEffect } from "react";
 import { addPropertyControls, ControlType } from "framer";
 import { useMeasuredSize } from "https://framer.com/m/framer/useMeasuredSize.js";
-import { useGlobalContext } from "./GlobalProvider.tsx";
+import { useGlobalContext } from "./global-provider.js";
 import mapboxgl from "https://cdn.jsdelivr.net/npm/mapbox-gl@3.4.0/+esm";
 
 var LocationType;
