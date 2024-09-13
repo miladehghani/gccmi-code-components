@@ -1,20 +1,21 @@
 import { createContext, useContext, useState } from "react";
-
-export const Context = createContext({
+import { jsx as _jsx } from "react/jsx-runtime";
+export const Context = /*#__PURE__*/ createContext({
   data: undefined,
   setData: () => {},
 });
-
 export default function withGlobalProvider(Component) {
   return (props) => {
     const [data, setData] = useState();
-
-    return (
-      <Context.Provider value={{ data, setData }}>
-        <Component {...props} />
-      </Context.Provider>
-    );
+    return /*#__PURE__*/ _jsx(Context.Provider, {
+      value: {
+        data,
+        setData,
+      },
+      children: /*#__PURE__*/ _jsx(Component, {
+        ...props,
+      }),
+    });
   };
 }
-
 export const useGlobalContext = () => useContext(Context);
