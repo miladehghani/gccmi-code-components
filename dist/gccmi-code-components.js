@@ -6,7 +6,7 @@ var Ti = (e, t, i) => t in e ? Ei(e, t, { enumerable: !0, configurable: !0, writ
 var Ee = (e, t, i) => Ti(e, typeof t != "symbol" ? t + "" : t, i), rn = (e, t, i) => t.has(e) || tn("Cannot " + i);
 var nt = (e, t, i) => (rn(e, t, "read from private field"), i ? i.call(e) : t.get(e)), gr = (e, t, i) => t.has(e) ? tn("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(e) : t.set(e, i), nn = (e, t, i, o) => (rn(e, t, "write to private field"), o ? o.call(e, i) : t.set(e, i), i);
 import { useMeasuredSize as _i } from "https://framer.com/m/framer/useMeasuredSize.js";
-import Vt from "https://cdn.jsdelivr.net/npm/mapbox-gl@3.4.0/+esm";
+import Wt from "https://cdn.jsdelivr.net/npm/mapbox-gl@3.4.0/+esm";
 function Ri(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;
 }
@@ -33,7 +33,7 @@ function Ci() {
   }, enqueueForceUpdate: function() {
   }, enqueueReplaceState: function() {
   }, enqueueSetState: function() {
-  } }, V = Object.assign, T = {};
+  } }, W = Object.assign, T = {};
   function C(l, v, D) {
     this.props = l, this.context = v, this.refs = T, this.updater = D || L;
   }
@@ -50,7 +50,7 @@ function Ci() {
     this.props = l, this.context = v, this.refs = T, this.updater = D || L;
   }
   var z = H.prototype = new R();
-  z.constructor = H, V(z, C.prototype), z.isPureReactComponent = !0;
+  z.constructor = H, W(z, C.prototype), z.isPureReactComponent = !0;
   var oe = Array.isArray, Q = Object.prototype.hasOwnProperty, le = { current: null }, be = { key: !0, ref: !0, __self: !0, __source: !0 };
   function ye(l, v, D) {
     var I, $ = {}, Z = null, K = null;
@@ -150,7 +150,7 @@ function Ci() {
     return l;
   } }, j.Component = C, j.Fragment = i, j.Profiler = n, j.PureComponent = H, j.StrictMode = o, j.Suspense = b, j.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Oe, j.act = _e, j.cloneElement = function(l, v, D) {
     if (l == null) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + l + ".");
-    var I = V({}, l.props), $ = l.key, Z = l.ref, K = l._owner;
+    var I = W({}, l.props), $ = l.key, Z = l.ref, K = l._owner;
     if (v != null) {
       if (v.ref !== void 0 && (Z = v.ref, K = le.current), v.key !== void 0 && ($ = "" + v.key), l.type && l.type.defaultProps) var G = l.type.defaultProps;
       for (B in v) Q.call(v, B) && !be.hasOwnProperty(B) && (I[B] = v[B] === void 0 && G !== void 0 ? G[B] : v[B]);
@@ -216,22 +216,22 @@ function Ci() {
   }, j.version = "18.3.1", j;
 }
 var pt = { exports: {} };
-/**
- * @license React
- * react.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 pt.exports;
 var an;
 function Oi() {
   return an || (an = 1, function(e, t) {
-    process.env.NODE_ENV !== "production" && function() {
+    /**
+     * @license React
+     * react.development.js
+     *
+     * Copyright (c) Facebook, Inc. and its affiliates.
+     *
+     * This source code is licensed under the MIT license found in the
+     * LICENSE file in the root directory of this source tree.
+     */
+    production !== "production" && function() {
       typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-      var i = "18.3.1", o = Symbol.for("react.element"), n = Symbol.for("react.portal"), a = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), p = Symbol.for("react.profiler"), b = Symbol.for("react.provider"), x = Symbol.for("react.context"), _ = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), M = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), V = Symbol.for("react.lazy"), T = Symbol.for("react.offscreen"), C = Symbol.iterator, R = "@@iterator";
+      var i = "18.3.1", o = Symbol.for("react.element"), n = Symbol.for("react.portal"), a = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), p = Symbol.for("react.profiler"), b = Symbol.for("react.provider"), x = Symbol.for("react.context"), _ = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), M = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), W = Symbol.for("react.lazy"), T = Symbol.for("react.offscreen"), C = Symbol.iterator, R = "@@iterator";
       function H(r) {
         if (r === null || typeof r != "object")
           return null;
@@ -428,7 +428,7 @@ function Oi() {
       function Fe(r) {
         return "" + r;
       }
-      function Ve(r) {
+      function We(r) {
         if (Je(r))
           return E("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", Kt(r)), Fe(r);
       }
@@ -439,7 +439,7 @@ function Oi() {
         var g = u.displayName || u.name || "";
         return g !== "" ? f + "(" + g + ")" : f;
       }
-      function We(r) {
+      function Ve(r) {
         return r.displayName || "Context";
       }
       function He(r) {
@@ -467,16 +467,16 @@ function Oi() {
           switch (r.$$typeof) {
             case x:
               var u = r;
-              return We(u) + ".Consumer";
+              return Ve(u) + ".Consumer";
             case b:
               var f = r;
-              return We(f._context) + ".Provider";
+              return Ve(f._context) + ".Provider";
             case _:
               return wt(r, r.render, "ForwardRef");
             case L:
               var h = r.displayName || null;
               return h !== null ? h : He(r.type) || "Memo";
-            case V: {
+            case W: {
               var g = r, O = g._payload, w = g._init;
               try {
                 return He(w(O));
@@ -564,9 +564,9 @@ function Oi() {
         }), Object.freeze && (Object.freeze(P.props), Object.freeze(P)), P;
       };
       function Qt(r, u, f) {
-        var h, g = {}, O = null, w = null, P = null, W = null;
+        var h, g = {}, O = null, w = null, P = null, V = null;
         if (u != null) {
-          st(u) && (w = u.ref, Rt(u)), je(u) && (Ve(u.key), O = "" + u.key), P = u.__self === void 0 ? null : u.__self, W = u.__source === void 0 ? null : u.__source;
+          st(u) && (w = u.ref, Rt(u)), je(u) && (We(u.key), O = "" + u.key), P = u.__self === void 0 ? null : u.__self, V = u.__source === void 0 ? null : u.__source;
           for (h in u)
             $e.call(u, h) && !Qe.hasOwnProperty(h) && (g[h] = u[h]);
         }
@@ -587,7 +587,7 @@ function Oi() {
           var de = typeof r == "function" ? r.displayName || r.name || "Unknown" : r;
           O && Jt(g, de), w && _t(g, de);
         }
-        return Ye(r, O, w, P, W, le.current, g);
+        return Ye(r, O, w, P, V, le.current, g);
       }
       function Zt(r, u) {
         var f = Ye(r.type, u, r.ref, r._self, r._source, r._owner, r.props);
@@ -596,9 +596,9 @@ function Oi() {
       function er(r, u, f) {
         if (r == null)
           throw new Error("React.cloneElement(...): The argument must be a React element, but you passed " + r + ".");
-        var h, g = v({}, r.props), O = r.key, w = r.ref, P = r._self, W = r._source, J = r._owner;
+        var h, g = v({}, r.props), O = r.key, w = r.ref, P = r._self, V = r._source, J = r._owner;
         if (u != null) {
-          st(u) && (w = u.ref, J = le.current), je(u) && (Ve(u.key), O = "" + u.key);
+          st(u) && (w = u.ref, J = le.current), je(u) && (We(u.key), O = "" + u.key);
           var te;
           r.type && r.type.defaultProps && (te = r.type.defaultProps);
           for (h in u)
@@ -612,7 +612,7 @@ function Oi() {
             ie[de] = arguments[de + 2];
           g.children = ie;
         }
-        return Ye(r.type, O, w, P, W, J, g);
+        return Ye(r.type, O, w, P, V, J, g);
       }
       function De(r) {
         return typeof r == "object" && r !== null && r.$$typeof === o;
@@ -632,7 +632,7 @@ function Oi() {
         return r.replace(Ot, "$&/");
       }
       function ze(r, u) {
-        return typeof r == "object" && r !== null && r.key != null ? (Ve(r.key), rr("" + r.key)) : u.toString(36);
+        return typeof r == "object" && r !== null && r.key != null ? (We(r.key), rr("" + r.key)) : u.toString(36);
       }
       function Ne(r, u, f, h, g) {
         var O = typeof r;
@@ -654,23 +654,23 @@ function Oi() {
               }
           }
         if (w) {
-          var P = r, W = g(P), J = h === "" ? Ct + ze(P, 0) : h;
-          if (Ke(W)) {
+          var P = r, V = g(P), J = h === "" ? Ct + ze(P, 0) : h;
+          if (Ke(V)) {
             var te = "";
-            J != null && (te = Ae(J) + "/"), Ne(W, u, te, "", function(wi) {
+            J != null && (te = Ae(J) + "/"), Ne(V, u, te, "", function(wi) {
               return wi;
             });
-          } else W != null && (De(W) && (W.key && (!P || P.key !== W.key) && Ve(W.key), W = Zt(
-            W,
+          } else V != null && (De(V) && (V.key && (!P || P.key !== V.key) && We(V.key), V = Zt(
+            V,
             // Keep both the (mapped) and old keys if they differ, just as
             // traverseAllChildren used to do for objects as children
             f + // $FlowFixMe Flow incorrectly thinks React.Portal doesn't have a key
-            (W.key && (!P || P.key !== W.key) ? (
+            (V.key && (!P || P.key !== V.key) ? (
               // $FlowFixMe Flow incorrectly thinks existing element's key can be a number
               // eslint-disable-next-line react-internal/safe-string-coercion
-              Ae("" + W.key) + "/"
+              Ae("" + V.key) + "/"
             ) : "") + J
-          )), u.push(W));
+          )), u.push(V));
           return 1;
         }
         var re, ie, de = 0, me = h === "" ? Ct : h + tr;
@@ -839,7 +839,7 @@ Your code should look like:
           _status: Be,
           _result: r
         }, f = {
-          $$typeof: V,
+          $$typeof: W,
           _payload: u,
           _init: or
         };
@@ -896,7 +896,7 @@ Your code should look like:
       var At;
       At = Symbol.for("react.module.reference");
       function s(r) {
-        return !!(typeof r == "string" || typeof r == "function" || r === a || r === p || ue || r === c || r === k || r === M || ee || r === T || ve || xe || ce || typeof r == "object" && r !== null && (r.$$typeof === V || r.$$typeof === L || r.$$typeof === b || r.$$typeof === x || r.$$typeof === _ || // This needs to include all possible module reference object
+        return !!(typeof r == "string" || typeof r == "function" || r === a || r === p || ue || r === c || r === k || r === M || ee || r === T || ve || xe || ce || typeof r == "object" && r !== null && (r.$$typeof === W || r.$$typeof === L || r.$$typeof === b || r.$$typeof === x || r.$$typeof === _ || // This needs to include all possible module reference object
         // types supported by any Flight configuration anywhere since
         // we don't know which Flight build this will end up being used
         // with.
@@ -1128,14 +1128,14 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         } catch (me) {
           if (me && h && typeof me.stack == "string") {
             for (var P = me.stack.split(`
-`), W = h.stack.split(`
-`), J = P.length - 1, te = W.length - 1; J >= 1 && te >= 0 && P[J] !== W[te]; )
+`), V = h.stack.split(`
+`), J = P.length - 1, te = V.length - 1; J >= 1 && te >= 0 && P[J] !== V[te]; )
               te--;
             for (; J >= 1 && te >= 0; J--, te--)
-              if (P[J] !== W[te]) {
+              if (P[J] !== V[te]) {
                 if (J !== 1 || te !== 1)
                   do
-                    if (J--, te--, te < 0 || P[J] !== W[te]) {
+                    if (J--, te--, te < 0 || P[J] !== V[te]) {
                       var re = `
 ` + P[J].replace(" at new ", " at ");
                       return r.displayName && re.includes("<anonymous>") && (re = re.replace("<anonymous>", r.displayName)), typeof r == "function" && Lt.set(r, re), re;
@@ -1176,7 +1176,7 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
               return ii(r.render);
             case L:
               return Ft(r.type, u, f);
-            case V: {
+            case W: {
               var h = r, g = h._payload, O = h._init;
               try {
                 return Ft(O(g), u, f);
@@ -1186,13 +1186,13 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
           }
         return "";
       }
-      var Vr = {}, Wr = q.ReactDebugCurrentFrame;
+      var Wr = {}, Vr = q.ReactDebugCurrentFrame;
       function jt(r) {
         if (r) {
           var u = r._owner, f = Ft(r.type, r._source, u ? u.type : null);
-          Wr.setExtraStackFrame(f);
+          Vr.setExtraStackFrame(f);
         } else
-          Wr.setExtraStackFrame(null);
+          Vr.setExtraStackFrame(null);
       }
       function ai(r, u, f, h, g) {
         {
@@ -1202,14 +1202,14 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
               var P = void 0;
               try {
                 if (typeof r[w] != "function") {
-                  var W = Error((h || "React class") + ": " + f + " type `" + w + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof r[w] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                  throw W.name = "Invariant Violation", W;
+                  var V = Error((h || "React class") + ": " + f + " type `" + w + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof r[w] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                  throw V.name = "Invariant Violation", V;
                 }
                 P = r[w](u, w, h, f, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
               } catch (J) {
                 P = J;
               }
-              P && !(P instanceof Error) && (jt(g), E("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", h || "React class", f, w, typeof P), jt(null)), P instanceof Error && !(P.message in Vr) && (Vr[P.message] = !0, jt(g), E("Failed %s type: %s", f, P.message), jt(null));
+              P && !(P instanceof Error) && (jt(g), E("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", h || "React class", f, w, typeof P), jt(null)), P instanceof Error && !(P.message in Wr) && (Wr[P.message] = !0, jt(g), E("Failed %s type: %s", f, P.message), jt(null));
             }
         }
       }
@@ -1334,8 +1334,8 @@ Check the top-level render call using <` + f + ">.");
         if (P == null)
           return P;
         if (h)
-          for (var W = 2; W < arguments.length; W++)
-            Ur(arguments[W], r);
+          for (var V = 2; V < arguments.length; V++)
+            Ur(arguments[V], r);
         return r === a ? ci(P) : Br(P), P;
       }
       var Gr = !1;
@@ -1415,20 +1415,20 @@ Check the top-level render call using <` + f + ">.");
               w || (Kr = !0, E("You called act(async () => ...) without await. This could lead to unexpected testing behaviour, interleaving multiple act calls and mixing their scopes. You should - await act(async () => ...);"));
             }), P;
           } else {
-            var W = h;
+            var V = h;
             if (Nt(u), rt === 0) {
               var J = Q.current;
               J !== null && (mr(J), Q.current = null);
               var te = {
                 then: function(ie, de) {
-                  Q.current === null ? (Q.current = [], vr(W, ie, de)) : ie(W);
+                  Q.current === null ? (Q.current = [], vr(V, ie, de)) : ie(V);
                 }
               };
               return te;
             } else {
               var re = {
                 then: function(ie, de) {
-                  ie(W);
+                  ie(V);
                 }
               };
               return re;
@@ -1485,7 +1485,7 @@ Check the top-level render call using <` + f + ">.");
     }();
   }(pt, pt.exports)), pt.exports;
 }
-process.env.NODE_ENV === "production" ? Er.exports = Ci() : Er.exports = Oi();
+production === "production" ? Er.exports = Ci() : Er.exports = Oi();
 var Ce = Er.exports;
 const bt = /* @__PURE__ */ Ri(Ce);
 /**
@@ -1511,24 +1511,25 @@ function Si() {
   }
   return ht.Fragment = i, ht.jsx = c, ht.jsxs = c, ht;
 }
-var vt = {};
-/**
- * @license React
- * react-jsx-runtime.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var sn;
+var vt = {}, sn;
 function ki() {
-  return sn || (sn = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = Ce, t = Symbol.for("react.element"), i = Symbol.for("react.portal"), o = Symbol.for("react.fragment"), n = Symbol.for("react.strict_mode"), a = Symbol.for("react.profiler"), c = Symbol.for("react.provider"), p = Symbol.for("react.context"), b = Symbol.for("react.forward_ref"), x = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), M = Symbol.for("react.lazy"), L = Symbol.for("react.offscreen"), V = Symbol.iterator, T = "@@iterator";
+  if (sn) return vt;
+  sn = 1;
+  /**
+   * @license React
+   * react-jsx-runtime.development.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+  return production !== "production" && function() {
+    var e = Ce, t = Symbol.for("react.element"), i = Symbol.for("react.portal"), o = Symbol.for("react.fragment"), n = Symbol.for("react.strict_mode"), a = Symbol.for("react.profiler"), c = Symbol.for("react.provider"), p = Symbol.for("react.context"), b = Symbol.for("react.forward_ref"), x = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), M = Symbol.for("react.lazy"), L = Symbol.for("react.offscreen"), W = Symbol.iterator, T = "@@iterator";
     function C(s) {
       if (s === null || typeof s != "object")
         return null;
-      var m = V && s[V] || s[T];
+      var m = W && s[W] || s[T];
       return typeof m == "function" ? m : null;
     }
     var R = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -1801,8 +1802,8 @@ function ki() {
         }
       return "";
     }
-    var Fe = Object.prototype.hasOwnProperty, Ve = {}, wt = R.ReactDebugCurrentFrame;
-    function We(s) {
+    var Fe = Object.prototype.hasOwnProperty, We = {}, wt = R.ReactDebugCurrentFrame;
+    function Ve(s) {
       if (s) {
         var m = s._owner, y = Je(s.type, s._source, m ? m.type : null);
         wt.setExtraStackFrame(y);
@@ -1824,7 +1825,7 @@ function ki() {
             } catch (ne) {
               F = ne;
             }
-            F && !(F instanceof Error) && (We(Y), H("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", S || "React class", y, N, typeof F), We(null)), F instanceof Error && !(F.message in Ve) && (Ve[F.message] = !0, We(Y), H("Failed %s type: %s", y, F.message), We(null));
+            F && !(F instanceof Error) && (Ve(Y), H("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", S || "React class", y, N, typeof F), Ve(null)), F instanceof Error && !(F.message in We) && (We[F.message] = !0, Ve(Y), H("Failed %s type: %s", y, F.message), Ve(null));
           }
       }
     }
@@ -2113,11 +2114,11 @@ React keys must be passed directly to JSX without using spread:
     }
     var ur = ar, At = or;
     vt.Fragment = o, vt.jsx = ur, vt.jsxs = At;
-  }()), vt;
+  }(), vt;
 }
-process.env.NODE_ENV === "production" ? wr.exports = Si() : wr.exports = ki();
+production === "production" ? wr.exports = Si() : wr.exports = ki();
 var Bt = wr.exports;
-const Wn = Ce.createContext({
+const Vn = Ce.createContext({
   data: void 0,
   setData: () => {
   }
@@ -2125,11 +2126,11 @@ const Wn = Ce.createContext({
 function Io(e) {
   return (t) => {
     const [i, o] = Ce.useState();
-    return /* @__PURE__ */ Bt.jsx(Wn.Provider, { value: { data: i, setData: o }, children: /* @__PURE__ */ Bt.jsx(e, { ...t }) });
+    return /* @__PURE__ */ Bt.jsx(Vn.Provider, { value: { data: i, setData: o }, children: /* @__PURE__ */ Bt.jsx(e, { ...t }) });
   };
 }
-const $n = () => Ce.useContext(Wn);
-function Vo(e) {
+const $n = () => Ce.useContext(Vn);
+function Wo(e) {
   return (t) => {
     var n;
     const { data: i } = $n();
@@ -2209,7 +2210,7 @@ var qe = function(e) {
       return !0;
   }
   return !1;
-}, mt = typeof window < "u" ? window : {}, Wt = /* @__PURE__ */ new WeakMap(), fn = /auto|scroll/, Fi = /^tb|vertical/, ji = /msie|trident/i.test(mt.navigator && mt.navigator.userAgent), Pe = function(e) {
+}, mt = typeof window < "u" ? window : {}, Vt = /* @__PURE__ */ new WeakMap(), fn = /auto|scroll/, Fi = /^tb|vertical/, ji = /msie|trident/i.test(mt.navigator && mt.navigator.userAgent), Pe = function(e) {
   return parseFloat(e || "0");
 }, ot = function(e, t, i) {
   return e === void 0 && (e = 0), t === void 0 && (t = 0), i === void 0 && (i = !1), new Mi((i ? t : e) || 0, (i ? e : t) || 0);
@@ -2219,17 +2220,17 @@ var qe = function(e) {
   contentBoxSize: ot(),
   contentRect: new Yn(0, 0, 0, 0)
 }), Un = function(e, t) {
-  if (t === void 0 && (t = !1), Wt.has(e) && !t)
-    return Wt.get(e);
+  if (t === void 0 && (t = !1), Vt.has(e) && !t)
+    return Vt.get(e);
   if (zn(e))
-    return Wt.set(e, dn), dn;
-  var i = getComputedStyle(e), o = Hr(e) && e.ownerSVGElement && e.getBBox(), n = !ji && i.boxSizing === "border-box", a = Fi.test(i.writingMode || ""), c = !o && fn.test(i.overflowY || ""), p = !o && fn.test(i.overflowX || ""), b = o ? 0 : Pe(i.paddingTop), x = o ? 0 : Pe(i.paddingRight), _ = o ? 0 : Pe(i.paddingBottom), k = o ? 0 : Pe(i.paddingLeft), M = o ? 0 : Pe(i.borderTopWidth), L = o ? 0 : Pe(i.borderRightWidth), V = o ? 0 : Pe(i.borderBottomWidth), T = o ? 0 : Pe(i.borderLeftWidth), C = k + x, R = b + _, H = T + L, z = M + V, oe = p ? e.offsetHeight - z - e.clientHeight : 0, Q = c ? e.offsetWidth - H - e.clientWidth : 0, le = n ? C + H : 0, be = n ? R + z : 0, ye = o ? o.width : Pe(i.width) - le - Q, Te = o ? o.height : Pe(i.height) - be - oe, ve = ye + C + Q + H, xe = Te + R + oe + z, ce = qe({
+    return Vt.set(e, dn), dn;
+  var i = getComputedStyle(e), o = Hr(e) && e.ownerSVGElement && e.getBBox(), n = !ji && i.boxSizing === "border-box", a = Fi.test(i.writingMode || ""), c = !o && fn.test(i.overflowY || ""), p = !o && fn.test(i.overflowX || ""), b = o ? 0 : Pe(i.paddingTop), x = o ? 0 : Pe(i.paddingRight), _ = o ? 0 : Pe(i.paddingBottom), k = o ? 0 : Pe(i.paddingLeft), M = o ? 0 : Pe(i.borderTopWidth), L = o ? 0 : Pe(i.borderRightWidth), W = o ? 0 : Pe(i.borderBottomWidth), T = o ? 0 : Pe(i.borderLeftWidth), C = k + x, R = b + _, H = T + L, z = M + W, oe = p ? e.offsetHeight - z - e.clientHeight : 0, Q = c ? e.offsetWidth - H - e.clientWidth : 0, le = n ? C + H : 0, be = n ? R + z : 0, ye = o ? o.width : Pe(i.width) - le - Q, Te = o ? o.height : Pe(i.height) - be - oe, ve = ye + C + Q + H, xe = Te + R + oe + z, ce = qe({
     devicePixelContentBoxSize: ot(Math.round(ye * devicePixelRatio), Math.round(Te * devicePixelRatio), a),
     borderBoxSize: ot(ve, xe, a),
     contentBoxSize: ot(ye, Te, a),
     contentRect: new Yn(k, b, ye, Te)
   });
-  return Wt.set(e, ce), ce;
+  return Vt.set(e, ce), ce;
 }, Bn = function(e, t, i) {
   var o = Un(e, i), n = o.borderBoxSize, a = o.contentBoxSize, c = o.devicePixelContentBoxSize;
   switch (t) {
@@ -2281,22 +2282,22 @@ var qe = function(e) {
   for (hn(e); Hi(); )
     e = Ni(), hn(e);
   return Pi() && Ai(), e > 0;
-}, br, Gn = [], Vi = function() {
+}, br, Gn = [], Wi = function() {
   return Gn.splice(0).forEach(function(e) {
     return e();
   });
-}, Wi = function(e) {
+}, Vi = function(e) {
   if (!br) {
     var t = 0, i = document.createTextNode(""), o = { characterData: !0 };
     new MutationObserver(function() {
-      return Vi();
+      return Wi();
     }).observe(i, o), br = function() {
       i.textContent = "".concat(t ? t-- : t++);
     };
   }
   Gn.push(e), br();
 }, $i = function(e) {
-  Wi(function() {
+  Vi(function() {
     requestAnimationFrame(e);
   });
 }, Ut = 0, Yi = function() {
@@ -2828,8 +2829,8 @@ var Rr;
     { x: e.maxX(n), y: e.minY(n) },
     { x: e.maxX(n), y: e.maxY(n) }
   ], e.transform = (n, a) => {
-    const { x: c, y: p } = a.transformPoint({ x: n.x, y: n.y }), { x: b, y: x } = a.transformPoint({ x: n.x + n.width, y: n.y }), { x: _, y: k } = a.transformPoint({ x: n.x + n.width, y: n.y + n.height }), { x: M, y: L } = a.transformPoint({ x: n.x, y: n.y + n.height }), V = Math.min(c, b, _, M), T = Math.max(c, b, _, M) - V, C = Math.min(p, x, k, L), R = Math.max(p, x, k, L) - C;
-    return { x: V, y: C, width: T, height: R };
+    const { x: c, y: p } = a.transformPoint({ x: n.x, y: n.y }), { x: b, y: x } = a.transformPoint({ x: n.x + n.width, y: n.y }), { x: _, y: k } = a.transformPoint({ x: n.x + n.width, y: n.y + n.height }), { x: M, y: L } = a.transformPoint({ x: n.x, y: n.y + n.height }), W = Math.min(c, b, _, M), T = Math.max(c, b, _, M) - W, C = Math.min(p, x, k, L), R = Math.max(p, x, k, L) - C;
+    return { x: W, y: C, width: T, height: R };
   }, e.containsPoint = (n, a) => !(a.x < e.minX(n) || a.x > e.maxX(n) || a.y < e.minY(n) || a.y > e.maxY(n) || isNaN(n.x) || isNaN(n.y)), e.containsRect = (n, a) => {
     for (const c of e.points(a))
       if (!e.containsPoint(n, c))
@@ -2923,15 +2924,15 @@ var On;
       aspectRatio: _ || null,
       fixedSize: k === !0
     });
-    let L = null, V = null, T = A.FixedNumber, C = A.FixedNumber;
+    let L = null, W = null, T = A.FixedNumber, C = A.FixedNumber;
     if (M.widthType !== A.FixedNumber && typeof c == "string") {
       const z = parseFloat(c);
       c.endsWith("fr") ? (T = A.FractionOfFreeSpace, L = z) : c === "auto" ? T = A.Auto : (T = A.Percentage, L = z / 100);
     } else c !== void 0 && typeof c != "string" && (L = ke.getNumber(c));
     if (M.heightType !== A.FixedNumber && typeof p == "string") {
       const z = parseFloat(p);
-      p.endsWith("fr") ? (C = A.FractionOfFreeSpace, V = z) : p === "auto" ? C = A.Auto : (C = A.Percentage, V = parseFloat(p) / 100);
-    } else p !== void 0 && typeof p != "string" && (V = ke.getNumber(p));
+      p.endsWith("fr") ? (C = A.FractionOfFreeSpace, W = z) : p === "auto" ? C = A.Auto : (C = A.Percentage, W = parseFloat(p) / 100);
+    } else p !== void 0 && typeof p != "string" && (W = ke.getNumber(p));
     let R = 0.5, H = 0.5;
     return b && (R = parseFloat(b) / 100), x && (H = parseFloat(x) / 100), {
       left: M.left ? ke.getNumber(i) : null,
@@ -2941,7 +2942,7 @@ var On;
       widthType: T,
       heightType: C,
       width: L,
-      height: V,
+      height: W,
       aspectRatio: M.aspectRatio || null,
       centerAnchorX: R,
       centerAnchorY: H
@@ -3441,7 +3442,7 @@ var Lo = { exports: {} };
     function L(T) {
       return k === null && (k = !!T.document.fonts), k;
     }
-    function V(T, C) {
+    function W(T, C) {
       var R = T.style, H = T.weight;
       if (_ === null) {
         var z = document.createElement("div");
@@ -3459,7 +3460,7 @@ var Lo = { exports: {} };
         if (L(R.context) && !M(R.context)) {
           var ye = new Promise(function(ve, xe) {
             function ce() {
-              (/* @__PURE__ */ new Date()).getTime() - Q >= oe ? xe(Error("" + oe + "ms timeout exceeded")) : R.context.document.fonts.load(V(R, '"' + R.family + '"'), H).then(function(ee) {
+              (/* @__PURE__ */ new Date()).getTime() - Q >= oe ? xe(Error("" + oe + "ms timeout exceeded")) : R.context.document.fonts.load(W(R, '"' + R.family + '"'), H).then(function(ee) {
                 1 <= ee.length ? ve() : setTimeout(ce, 25);
               }, xe);
             }
@@ -3485,13 +3486,13 @@ var Lo = { exports: {} };
             }
           }
           var ce = new o(H), ee = new o(H), ue = new o(H), q = -1, se = -1, E = -1, we = -1, Oe = -1, _e = -1, l = document.createElement("div");
-          l.dir = "ltr", n(ce, V(R, "sans-serif")), n(ee, V(R, "serif")), n(ue, V(R, "monospace")), l.appendChild(ce.g), l.appendChild(ee.g), l.appendChild(ue.g), R.context.document.body.appendChild(l), we = ce.g.offsetWidth, Oe = ee.g.offsetWidth, _e = ue.g.offsetWidth, xe(), c(ce, function(v) {
+          l.dir = "ltr", n(ce, W(R, "sans-serif")), n(ee, W(R, "serif")), n(ue, W(R, "monospace")), l.appendChild(ce.g), l.appendChild(ee.g), l.appendChild(ue.g), R.context.document.body.appendChild(l), we = ce.g.offsetWidth, Oe = ee.g.offsetWidth, _e = ue.g.offsetWidth, xe(), c(ce, function(v) {
             q = v, ve();
-          }), n(ce, V(R, '"' + R.family + '",sans-serif')), c(ee, function(v) {
+          }), n(ce, W(R, '"' + R.family + '",sans-serif')), c(ee, function(v) {
             se = v, ve();
-          }), n(ee, V(R, '"' + R.family + '",serif')), c(ue, function(v) {
+          }), n(ee, W(R, '"' + R.family + '",serif')), c(ue, function(v) {
             E = v, ve();
-          }), n(ue, V(R, '"' + R.family + '",monospace'));
+          }), n(ue, W(R, '"' + R.family + '",monospace'));
         });
       });
     }, e.exports = p;
@@ -3596,7 +3597,7 @@ const Sr = {
 })).reduce(
   (t, i) => (t.titles.push(i.key), t.options.push(i.value), t),
   { titles: [], options: [], dict: e }
-), Vn = Fo({
+), Wn = Fo({
   Streets: "mapbox://styles/mapbox/streets-v11",
   Outdoors: "mapbox://styles/mapbox/outdoors-v11",
   Light: "mapbox://styles/mapbox/light-v10",
@@ -3608,7 +3609,7 @@ const Sr = {
 });
 function ei(e) {
   const t = Ce.useRef(null), i = Ce.useRef(null), { setData: o } = $n();
-  Vt.accessToken = e.accessToken;
+  Wt.accessToken = e.accessToken;
   const n = _i(i), a = n != null && n.width ? n.width : 400, c = n != null && n.height ? n.height : 300, {
     style: p,
     locationType: b,
@@ -3617,7 +3618,7 @@ function ei(e) {
     latitude: k,
     zoom: M,
     anonymousStyle: L
-  } = e, V = b === "City" ? [kr.coordinates[x].longitude, kr.coordinates[x].latitude] : [_, k];
+  } = e, W = b === "City" ? [kr.coordinates[x].longitude, kr.coordinates[x].latitude] : [_, k];
   return Ce.useEffect(() => {
     (async () => {
       try {
@@ -3631,32 +3632,32 @@ function ei(e) {
     })();
   }, []), Ce.useEffect(() => {
     if (t.current) {
-      t.current.jumpTo({ center: V });
+      t.current.jumpTo({ center: W });
       return;
     }
-    t.current = new Vt.Map({
+    t.current = new Wt.Map({
       container: i.current,
       style: L,
-      center: V,
+      center: W,
       zoom: 2
     }), t.current.on("click", (T) => {
       console.log(T.lngLat), o(T.lngLat);
     }), t.current.on("load", (T) => {
       console.log("map loaded"), Object.entries(Sr).forEach(([C, R]) => {
-        const H = C.replace(/\s/g, ""), z = new Vt.Popup({ offset: 25 }).setHTML(
+        const H = C.replace(/\s/g, ""), z = new Wt.Popup({ offset: 25 }).setHTML(
           `<h3>${C}</h3><button id="${H}">view data</button>`
         );
-        new Vt.Marker().setLngLat([R.longitude, R.latitude]).setPopup(z).addTo(T.target);
+        new Wt.Marker().setLngLat([R.longitude, R.latitude]).setPopup(z).addTo(T.target);
       });
     });
   }, []), Ce.useEffect(() => {
     t.current && t.current.resize();
   }, [a, c]), Ce.useEffect(() => {
     if (t.current) {
-      t.current.jumpTo({ center: V, zoom: 2 });
+      t.current.jumpTo({ center: W, zoom: 2 });
       return;
     }
-  }, [V, M]), Ce.useEffect(() => {
+  }, [W, M]), Ce.useEffect(() => {
     if (t.current) {
       t.current.setStyle(L);
       return;
@@ -3743,8 +3744,8 @@ Po(ei, {
   },
   anonymousStyle: {
     type: U.Enum,
-    options: Vn.options,
-    optionTitles: Vn.titles,
+    options: Wn.options,
+    optionTitles: Wn.titles,
     title: "Map Style"
   }
 });
@@ -3752,5 +3753,5 @@ export {
   Io as GlobalProvider,
   ei as MapComponent,
   $n as useGlobalContext,
-  Vo as withGlobalProvider
+  Wo as withGlobalProvider
 };
