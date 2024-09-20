@@ -2,7 +2,6 @@
 import { useRef, useEffect } from "react";
 import { addPropertyControls, ControlType } from "framer";
 import { useMeasuredSize } from "https://framer.com/m/framer/useMeasuredSize.js";
-import { useGlobalContext } from "./GlobalProvider.tsx";
 import mapboxgl from "https://cdn.jsdelivr.net/npm/mapbox-gl@3.4.0/+esm";
 
 /**
@@ -22,7 +21,6 @@ export default function Mapbox3D({
 
   const map = useRef(null);
   const mapContainer = useRef(null);
-  const { data, setData } = useGlobalContext();
   const size = useMeasuredSize(mapContainer);
   const width = size?.width ? size.width : 400;
   const height = size?.height ? size.height : 300;
