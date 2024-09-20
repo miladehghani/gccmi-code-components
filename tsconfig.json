@@ -1,7 +1,12 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "jsx": "react-jsx", // Use "react" for older versions of React
+    "target": "ES5", // Target JavaScript version
+    "module": "ESNext", // Module system
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Enable interop between CommonJS and ES Modules
+    "skipLibCheck": true, // Skip type checks on declaration files
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
