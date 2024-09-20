@@ -8,8 +8,12 @@ export default {
   input: "src/main.tsx", // Your entry point
   output: {
     file: "dist/bundle.js", // Output bundle file
-    format: "cjs", // CommonJS format
+    format: "esm", // CommonJS format
     sourcemap: true, // Generate sourcemaps
+  },
+  external: (id) => {
+    // Exclude everything from node_modules
+    return id.startsWith("react");
   },
   plugins: [
     nodeResolve(), // Helps Rollup find external modules
